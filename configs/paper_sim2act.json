@@ -1,0 +1,101 @@
+{
+  "record_type": "manuscript_protocol_metadata",
+  "complete_pipeline_configuration": false,
+  "source": "Sim2Act_AIC_Manuscript1031.docx",
+  "method": "Sim2ActViewRanker",
+  "architecture": {
+    "global_feature_dim": 16,
+    "candidate_feature_dim": 24,
+    "global_encoder_dims": [16, 64, 64],
+    "candidate_encoder_dims": [24, 96, 96],
+    "set_pooling": ["masked_mean", "masked_max"],
+    "set_context_dim": 192,
+    "scoring_head_dims": [352, 128, 64, 1],
+    "activation": "GELU",
+    "encoder_layer_norm": "after_first_linear",
+    "dropout_probability": 0.1,
+    "dropout_placement": ["candidate_encoder_after_first_gelu", "scoring_head_after_first_gelu"],
+    "parameter_count": 70785
+  },
+  "features": {
+    "scaler_fit_partition": "development_training_only",
+    "standard_deviation_floor": 0.000001,
+    "standardized_clip": [-8, 8],
+    "unavailable_raw_summary_fill": 0,
+    "dtype": "float32",
+    "padding_added_after_standardization": true
+  },
+  "supervision": {
+    "target": "one_step_surface_band_iou_gain_under_frozen_cs_max",
+    "independent_candidate_additions": true,
+    "negative_gains_retained": true,
+    "listwise_temperature": 0.05,
+    "pairwise_gain_difference_epsilon": 0.000001,
+    "regression_gain_std_floor": 0.000001,
+    "smooth_l1_transition": 1.0,
+    "loss_weights": {"listwise": 1.0, "pairwise": 0.5, "regression": 0.1},
+    "training_state_seeds": [2025, 2026, 2027, 2028, 2029],
+    "validation_state_seeds": [2025, 2026, 2027],
+    "training_states": 11229,
+    "training_candidate_labels": 210688,
+    "validation_states": 1544,
+    "validation_candidate_labels": 28409
+  },
+  "training": {
+    "batch_size": 16,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 5.0,
+    "max_epochs": 100,
+    "early_stopping_patience": 12,
+    "model_seeds": [2025, 2026, 2027, 2028, 2029],
+    "checkpoint_primary_criterion": "minimum_unrounded_scene_balanced_mean_one_step_validation_oracle_regret",
+    "checkpoint_tie_breaks": ["higher_ndcg_at_5", "higher_oracle_top_3_hit_rate", "earlier_epoch"],
+    "historical_sim2act_selected_epochs": [1, 1, 1, 1, 1]
+  },
+  "data": {
+    "development_training_scenes": 100,
+    "development_validation_scenes": 28,
+    "held_out_semi_synthetic_scenes": 208,
+    "real_positive_segments": 15,
+    "real_positive_structures": 5,
+    "real_negative_segments": 3,
+    "real_negative_structures": 1,
+    "original_split_manifests_included": false
+  },
+  "surface_reference": {
+    "sampled_surface_points": 1000000,
+    "enstrect_sampler_internal_seed": 42,
+    "centerline_interpolation_spacing_m": 0.001,
+    "primary_reference_radius_m": 0.01,
+    "sensitivity_reference_radii_m": [0.005, 0.01, 0.02],
+    "counting_domain": "all_fixed_sampled_surface_points"
+  },
+  "fusion": {
+    "backend": "CS-Max",
+    "class_order": ["background", "crack"],
+    "class_weights": [1, 10],
+    "fusion_dtype": "float16",
+    "retained_score_dtype": "float32",
+    "tie_label": "background",
+    "inclusive_angle_range_degrees": [90, 270],
+    "fusion_angle_dtype": "float16",
+    "observation_angle_dtype": "float32"
+  },
+  "evaluation": {
+    "initial_views": 3,
+    "initialization_seeds": [2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034],
+    "recorded_budgets": "every_integer_from_3_to_all_views",
+    "primary_metric": "normalized_raw_surface_band_iou_auc",
+    "integration": "trapezoidal_over_each_trajectory_integer_budget_grid",
+    "normalization": "same_scene_all_view_iou_times_budget_span",
+    "semi_synthetic_aggregation": "equal_scene_weight_after_seed_averaging",
+    "real_aggregation": "segments_within_structure_then_five_equal_structure_weights",
+    "paired_scene_bootstrap_replicates": 5000,
+    "paired_scene_bootstrap_percentiles": [2.5, 97.5],
+    "real_data_model_adaptation": false,
+    "trained_checkpoints_included": false,
+    "fitted_scalers_included": false
+  }
+}

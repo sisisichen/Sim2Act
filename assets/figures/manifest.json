@@ -1,0 +1,93 @@
+{
+  "source": "../../manuscript/Sim2Act_AIC_Manuscript1031.docx",
+  "figures": [
+    {
+      "figure": 1,
+      "path": "fig1_information_boundary.png",
+      "description": "Pre-reveal information boundary",
+      "word_media": "word/media/image1.emf",
+      "conversion": "embedded EMF rasterized with Windows GDI at width 2000 px",
+      "sha256": "8c88f415da5d87b1902ba7e3391becf395a0380708147842c9e99587bce8107e"
+    },
+    {
+      "figure": 2,
+      "path": "fig2_framework.png",
+      "description": "Offline supervision and reveal-and-fuse framework",
+      "word_media": "word/media/image2.emf",
+      "conversion": "embedded EMF rasterized with Windows GDI at width 2000 px",
+      "sha256": "f656251aaef90e809c2f17445ca613b5a8f4c8f19c842178e7650667f253e4ca"
+    },
+    {
+      "figure": 3,
+      "path": "fig3_ranker_architecture.png",
+      "description": "Sim2ActViewRanker architecture",
+      "word_media": "word/media/image3.emf",
+      "conversion": "embedded EMF rasterized with Windows GDI at width 2000 px",
+      "sha256": "0bae343c63f5f8d3399831c24013176beda428a5938bd4fd7f2df35ec32446fd"
+    },
+    {
+      "figure": 4,
+      "path": "fig4_passive_fusion.png",
+      "description": "Passive fusion benchmark",
+      "word_media": "word/media/image4.emf",
+      "conversion": "embedded EMF rasterized with Windows GDI at width 2000 px",
+      "sha256": "b1839baea448c27755cc69b10265a4e4fc256e2aa49880aefcb38a467a7bbb1d"
+    },
+    {
+      "figure": 5,
+      "path": "fig5_synthetic_acquisition.png",
+      "description": "Semi-synthetic acquisition curves",
+      "word_media": "word/media/image5.emf",
+      "conversion": "embedded EMF rasterized with Windows GDI at width 2000 px",
+      "sha256": "a282e15954fcb4c286db83648eebad8492b7d44a249fcf67ffae4a53d8856054"
+    },
+    {
+      "figure": 6,
+      "path": "fig6_offline_diagnostics.png",
+      "description": "Offline view-count and regret diagnostics",
+      "word_media": "word/media/image6.emf",
+      "conversion": "embedded EMF rasterized with Windows GDI at width 2000 px",
+      "sha256": "7dfb6a2424992c8a34a0df7f8263008ee4a14dc0b6cfd58608b979b6c712c63d"
+    },
+    {
+      "figure": 7,
+      "path": "fig7_real_acquisition.png",
+      "description": "Real zero-shot acquisition curves",
+      "word_media": "word/media/image7.emf",
+      "conversion": "embedded EMF rasterized with Windows GDI at width 2000 px",
+      "sha256": "ad68863409d79629155b53f052ff19380bd5e574a14bdcf8a212afe64b81c1f9"
+    },
+    {
+      "figure": 8,
+      "path": "fig8_matched_budget_comparison.png",
+      "description": "Bridge B matched-budget qualitative comparison",
+      "word_media": "word/media/image8.emf",
+      "conversion": "embedded EMF rasterized with Windows GDI at width 2000 px",
+      "sha256": "cdf94ba8c5979fc1946f52e71678ebeca388ebc6ab4740f841a90ddea93b25cb"
+    },
+    {
+      "figure": 9,
+      "path": "fig9_reference_band_sensitivity.png",
+      "description": "Reference-band sensitivity",
+      "word_media": "word/media/image9.png",
+      "conversion": "original embedded PNG",
+      "sha256": "7a8102bf2592c1fa947fc6937a73da9bd92ceee5a529a09e0c3dd05870d9b22b"
+    },
+    {
+      "figure": 10,
+      "path": "fig10_negative_controls.png",
+      "description": "Reference-empty negative controls",
+      "word_media": "word/media/image10.emf",
+      "conversion": "embedded EMF rasterized with Windows GDI at width 2000 px",
+      "sha256": "c4b879ea87ff7304c24468d11de2fa02ebfba7f15bb5d1dc0a623674cc68ccce"
+    },
+    {
+      "figure": 11,
+      "path": "fig11_metric_distinction.png",
+      "description": "Surface-band and centerline metric distinction",
+      "word_media": "word/media/image11.png",
+      "conversion": "original embedded PNG",
+      "sha256": "c761aa396002b8042ce10c08f95d86c33d1d08bd15fdd9ffc93d8ba5829d4576"
+    }
+  ]
+}

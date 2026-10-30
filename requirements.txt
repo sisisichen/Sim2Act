@@ -1,0 +1,2 @@
+# Minimal NumPy-only research primitives. See pyproject.toml optional extras.
+numpy>=1.26,<2

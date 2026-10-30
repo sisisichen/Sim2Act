@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sim2act-baselines"
+version = "0.1.0"
+description = "Research components for causal active view planning and 2.5D crack mapping"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26,<2"]
+
+[project.optional-dependencies]
+learning = ["torch>=2.3,<3", "h5py>=3.10"]
+science = ["h5py>=3.10", "scipy>=1.11", "networkx>=3", "scikit-learn>=1.3", "pandas>=2", "Pillow>=10", "psutil>=5.9", "open3d>=0.19", "pyntcloud>=0.3", "pc-skeletor>=1.0", "robust-laplacian>=1"]
+test = ["pytest>=8"]
+
+[project.urls]
+Repository = "https://github.com/sisisichen/Sim2Act"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"

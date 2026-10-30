@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use Sim2Act, please cite the accompanying manuscript."
+type: software
+title: "Sim2Act"
+authors:
+  - family-names: Chen
+    given-names: Si
+  - family-names: Bao
+    given-names: Yuyang
+  - family-names: Bao
+    given-names: Longsheng
+  - family-names: Zhao
+    given-names: Jiakang
+  - family-names: Yu
+    given-names: Ling
+repository-code: "https://github.com/sisisichen/Sim2Act"
+url: "https://github.com/sisisichen/Sim2Act"
+preferred-citation:
+  type: unpublished
+  title: "Simulation-supervised view ranking for budget-constrained 2.5D crack mapping"
+  authors:
+    - family-names: Chen
+      given-names: Si
+    - family-names: Bao
+      given-names: Yuyang
+    - family-names: Bao
+      given-names: Longsheng
+    - family-names: Zhao
+      given-names: Jiakang
+    - family-names: Yu
+      given-names: Ling
+  year: 2026
+  notes: "Manuscript."
+  url: "https://github.com/sisisichen/Sim2Act"
